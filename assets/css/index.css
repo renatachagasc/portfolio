@@ -1,0 +1,223 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #F0F0F0;
+}
+
+
+/*** animação ***/
+
+.js .anime {
+    opacity: 0;
+    transform: translate3D(-50px, 0px, 0px);
+}
+
+.js .anime-init {
+    opacity: 1;
+    transform: translate3D(0px, 0px, 0px);
+    transition: .3s all ease;
+}
+
+.pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.01, 1.01, 1.01);
+        transform: scale3d(1.01, 1.01, 1.01);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.01, 1.01, 1.01);
+        transform: scale3d(1.01, 1.01, 1.01);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(80%, 100%, 80%);
+        transform: translate3d(80%, 100%, 80%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(80%, 100%, 80%);
+        transform: translate3d(80%, 100%, 80%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+color2 {
+    color: #EE01ED;
+}
+
+
+/*section portfolio */
+
+section.portfolio {
+    padding-top: 4rem;
+}
+
+section.portfolio h1 {
+    font-family: 'Shadows Into Light', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 53px;
+    line-height: 31px;
+    color: #607BE5;
+}
+
+section.portfolio h5 {
+    font-family: 'Shadows Into Light', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 58px;
+    color: #607BE5;
+}
+
+section.portfolio h5::after {
+    content: '';
+    display: inline-block;
+    height: 2px;
+    width: 80%;
+    background: #607BE5;
+}
+
+section.portfolio h1 small {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #4901E2;
+}
+
+section.portfolio p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #868686;
+}
+
+.down-curriculum a {
+    background: #607BE5;
+    padding: 20px 60px;
+    border-radius: 15px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all .6s;
+}
+
+.down-curriculum a:hover {
+    background: #EE01ED;
+    transition: all .6s;
+}
+
+.sociais_midias .links a {
+    margin: 5px;
+    background: transparent;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .6s;
+}
+
+.sociais_midias .links a:hover {
+    background: #EE01ED;
+    transition: all .6s;
+}
+
+.sociais_midias {
+    background: #607BE5;
+    position: fixed;
+    height: 100%;
+    width: 100px;
+    justify-content: center;
+}
+
+.sociais_midias .links {
+    display: grid;
+    justify-content: center;
+    top: 40%;
+    position: relative;
+}
+
+@media(max-width:1329px) {
+    .sociais_midias {
+        background: #607BE5;
+        position: fixed;
+        height: 100px;
+        width: 100%;
+        justify-content: center;
+        z-index: 2;
+    }
+    .sociais_midias .links {
+        display: flex;
+        justify-content: center;
+        top: 20%;
+        position: relative;
+    }
+    section.portfolio {
+        padding-top: 10rem;
+    }
+    section.portfolio svg {
+        margin-top: 3rem;
+    }
+}
